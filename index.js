@@ -21,8 +21,5 @@ const rutas = (router) => {
 
 }
 
-
-
-
 rutas(app);
 app.listen(8080);
