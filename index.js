@@ -14,12 +14,14 @@ const rutas = (router) => {
     });
 
     router.post('/contactos/agregar', async (peticion, respuesta) => {
-        const contact = respuesta.body;
+        const contact = peticion.body;
         contactos.push(contact);
         respuesta.json('Contacto agregado exitosamente.')
     })
 
 }
-
+const port = 8080;
 rutas(app);
-app.listen(8080);
+app.listen(port);
+
+console.log(`App iniciada en el puesto ${port}`)
